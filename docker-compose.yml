@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    image: node:20-alpine
+    container_name: vibe-next-starterkit-web
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://host.docker.internal:8000/api/v1
+      LARAVEL_OPENAPI_URL: http://host.docker.internal:8000/docs/v1/openapi.yaml
+    command: sh -lc "npm install && npm run dev -- --hostname 0.0.0.0 --port 3000"
