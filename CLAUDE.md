@@ -80,10 +80,10 @@ Hero kanan = **API console interaktif**: `POST /v1/projects` → `201 Created`, 
 
 1. **Header sticky** — brand mono `SUDHARMIKA_`, nav, toggle bahasa ID|EN, CTA "Konsultasi Gratis"
 2. **Hero** — headline + lead + dual CTA (WA primary, "Lihat Paket" ghost) + status "available" pulse + API console
-3. **Proof strip** — 4 stat: `7+ tahun`, `30+ sistem`, `<24 jam respon`, `30 hari garansi`
+3. **Proof strip** — 3 item: pengalaman di tim software house (tanpa angka tahun; `TODO(wayan)` sebelum menulis jumlah tahun), `<24 jam respon`, `30 hari garansi`
 4. **Tentang (`#tentang`)** — bio + link LinkedIn/GitHub + kartu **R&D** (Claude & Claude Code, n8n, Hermes, OpenClaw)
 5. **Layanan (`#layanan`)** — 3 paket + catatan retainer
-6. **Hasil Kerja (`#hasil`)** — 3 studi kasus dengan metrik
+6. **Pengalaman Profesional (`#hasil`)** — pekerjaan di software house, tanpa nama klien dan tanpa metrik angka. Anchor tetap `#hasil`.
 7. **Proses (`#proses`)** — 4 tahap: Discovery → Blueprint → Build → Stabilize
 8. **Testimonial** — dihapus sampai ada klien nyata. Jangan tampilkan quote palsu.
 9. **Stack** — chips; AI tools diberi class `.ai` (border cobalt)
@@ -156,9 +156,9 @@ Crawler mengindeks HTML awal (Bahasa Indonesia). Untuk SEO EN maksimal, **fase b
 - Lokasi: Bali, Indonesia (GMT+8)
 
 ### PLACEHOLDER — wajib dikonfirmasi/diganti oleh Wayan sebelum production
-- [ ] Angka proof strip: `7+ tahun`, `30+ sistem` → ganti angka real
+- [ ] Tahun pengalaman: jangan tulis angka sebelum Wayan mengonfirmasi (`TODO(wayan)` di proof strip)
 - [ ] Harga 3 paket (Rp 15jt / 7jt / 35jt) → konfirmasi
-- [ ] Metrik studi kasus (−70%, 6 minggu, 0 insiden) → ganti data real; studi kasus #1 & #3 ditulis generik dari project automasi internal
+- [ ] Pengalaman profesional: tetap tanpa metrik angka dan tanpa nama klien (pekerjaan software house, NDA)
 - [ ] Testimonial dihapus sampai ada klien nyata. Kembalikan hanya dengan quote asli plus nama dan izin.
 - [ ] Konversi USD di FAQ EN (~USD 900) → sesuaikan kurs
 

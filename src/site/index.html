@@ -87,7 +87,7 @@
         "@type": "Organization",
         "name": "Timedoor"
       },
-      "description": "I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan Backend Team Leader di Timedoor. Ia mengerjakan asisten WhatsApp AI, automasi n8n, asisten AI self-hosted (OpenClaw dan Hermes Agent), website, dan backend custom. Pengembangan dibantu AI; keputusan arsitektur tetap manusia.",
+      "description": "I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan Backend Team Leader di Timedoor, sebuah software house. Untuk klien freelance ia mengerjakan asisten WhatsApp AI, automasi n8n, asisten AI self-hosted (OpenClaw dan Hermes Agent), website, dan backend custom. Detail klien dari pekerjaan di software house tidak ditampilkan. Pengembangan dibantu AI; keputusan arsitektur tetap manusia.",
       "email": "mailto:sudhar.denpasar@gmail.com",
       "telephone": "+62-899-2927-276",
       "address": {
@@ -402,7 +402,7 @@
           "name": "Bisa kerja remote dengan klien di luar Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bisa. Sebagian besar klien saya remote, dari Jakarta dan Surabaya sampai luar negeri. Kita bicara lewat WhatsApp, email, atau video call (GMT+8), dengan update tertulis setiap minggu."
+            "text": "Bisa. Saya kerja dari Bali (GMT+8). Komunikasi lewat WhatsApp, email, atau video call, dengan update tertulis setiap minggu."
           }
         },
         {
@@ -560,10 +560,12 @@ header{
 
 /* ---------- Proof strip ---------- */
 .proof{border-bottom:1px solid var(--line);background:var(--paper-2)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
-.proof-item{background:var(--paper-2);padding:26px 20px;text-align:left}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.proof-item{background:var(--paper-2);padding:26px 20px;text-align:left;min-width:0}
 .proof-item b{font-family:var(--display);font-weight:800;font-size:1.7rem;display:block;letter-spacing:-.02em}
 .proof-item span{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.proof-text{display:flex;align-items:center}
+.proof-text span{font-family:var(--body);font-size:1.02rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink);line-height:1.35;overflow-wrap:break-word}
 
 /* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
@@ -750,7 +752,7 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
     <a class="brand" href="#top" aria-label="Sudharmika — beranda">SUDHARMIKA<span class="dot">_</span></a>
     <nav class="nav-links" aria-label="Navigasi utama">
       <a href="#layanan" data-i18n="nav_services">Layanan</a>
-      <a href="#hasil" data-i18n="nav_results">Hasil</a>
+      <a href="#hasil" data-i18n="nav_results">Pengalaman Profesional</a>
       <a href="#tentang" data-i18n="nav_about">Tentang</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -802,10 +804,10 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
 </section>
 
 <!-- ================= PROOF STRIP ================= -->
+<!-- TODO(wayan): confirm years of professional experience before stating a number on the site. -->
 <section class="proof" aria-label="Ringkasan pengalaman">
   <div class="wrap proof-grid">
-    <div class="proof-item"><b>7+</b><span data-i18n="proof1">tahun membangun sistem</span></div>
-    <div class="proof-item"><b>30+</b><span data-i18n="proof2">sistem di produksi</span></div>
+    <div class="proof-item proof-text"><span data-i18n="proof2">Berpengalaman di tim software house</span></div>
     <div class="proof-item"><b>&lt;24 <span data-i18n="proof3a">jam</span></b><span data-i18n="proof3">waktu balasan</span></div>
     <div class="proof-item"><b>30 <span data-i18n="proof4a">hari</span></b><span data-i18n="proof4">garansi perbaikan bug</span></div>
   </div>
@@ -817,7 +819,7 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
     <div class="about">
       <span class="eyebrow" data-i18n="about_eyebrow">Tentang saya</span>
       <h2 data-i18n="about_h2">Dari chat WhatsApp sampai database. Saya yang merakitnya.</h2>
-      <p data-i18n-html="about_p1"><strong>I Wayan Sudharmika</strong> adalah backend engineer di Bali dan Backend Team Leader di <strong>Timedoor</strong>. Sudah 7+ tahun saya membangun sistem yang benar-benar dipakai: chat WhatsApp, automasi, API, sampai database. Pengembangan dibantu AI. Keputusan arsitektur tetap manusia.</p>
+      <p data-i18n-html="about_p1"><strong>I Wayan Sudharmika</strong> adalah backend engineer di Bali dan Backend Team Leader di <strong>Timedoor</strong>, sebuah software house. Pekerjaan harian saya di sana: sistem backend, automasi, dan API. Pengembangan dibantu AI. Keputusan arsitektur tetap manusia.</p>
       <p data-i18n-html="about_p2">Prinsip saya sederhana: <strong>sistem yang baik itu membosankan</strong>. Ia jalan tiap hari, jarang rewel, dan tim Anda bisa merawatnya setelah saya selesai. Karena itu setiap project saya sertakan dokumentasi, testing, dan serah terima yang lengkap.</p>
       <div class="about-links">
         <a class="btn btn-cobalt btn-sm" href="https://www.linkedin.com/in/wayan-sudharmika-72820b109/" target="_blank" rel="noopener" data-i18n="about_li">LinkedIn saya ↗</a>
@@ -959,32 +961,29 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
   </div>
 </section>
 
-<!-- ================= CASE STUDIES ================= -->
+<!-- ================= PROFESSIONAL EXPERIENCE ================= -->
 <section class="section" id="hasil">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow" data-i18n="case_eyebrow">Hasil kerja</span>
-      <h2 data-i18n="case_h2">Sistem yang dipakai, bukan cuma yang diluncurkan.</h2>
-      <p data-i18n="case_sub">Tiga contoh. Angka dan detail teknisnya saya jelaskan saat konsultasi.</p>
+      <span class="eyebrow" data-i18n="case_eyebrow">Software house</span>
+      <h2 data-i18n="case_h2">Pengalaman Profesional</h2>
+      <p data-i18n="case_sub">Dikerjakan sebagai backend engineer / team lead di sebuah software house. Detail klien dirahasiakan.</p>
     </div>
     <div class="case-grid">
       <article class="case">
-        <p class="kind" data-i18n="case1_kind">Automasi · operasional internal</p>
+        <p class="kind" data-i18n="case1_kind">Operasional internal</p>
         <h3 data-i18n="case1_h3">Platform operasional internal</h3>
-        <p data-i18n="case1_p">Approval dan notifikasi untuk operasional harian. Yang tadinya bolak-balik chat manual sekarang jalan sendiri, dengan jejak audit yang lengkap.</p>
-        <div class="metric"><b>−70%</b><span data-i18n="case1_m">waktu proses approval harian</span></div>
+        <p data-i18n="case1_p">Sistem approval dan notifikasi untuk operasional harian di sebuah perusahaan. Stack-nya API, database relasional, dan pencatatan audit. Alur approval menjadi lebih tertata.</p>
       </article>
       <article class="case">
-        <p class="kind" data-i18n="case2_kind">SaaS · fondasi backend</p>
-        <h3 data-i18n="case2_h3">SaaS MVP Backend</h3>
-        <p data-i18n="case2_p">API, login, dan arsitektur yang siap billing untuk tim kecil yang perlu launch cepat — tanpa utang teknis yang menahan rilis berikutnya.</p>
-        <div class="metric"><b>6 <span data-i18n="case2_w">minggu</span></b><span data-i18n="case2_m">dari kickoff sampai production</span></div>
+        <p class="kind" data-i18n="case2_kind">Produk SaaS</p>
+        <h3 data-i18n="case2_h3">Fondasi backend SaaS</h3>
+        <p data-i18n="case2_p">Fondasi backend untuk produk SaaS di sebuah tim produk: login, API, dan data yang siap untuk penagihan. Stack-nya API, database, dan deploy bertahap. Timnya bisa lanjut membangun di atas fondasi itu.</p>
       </article>
       <article class="case">
-        <p class="kind" data-i18n="case3_kind">Keandalan · notifikasi</p>
-        <h3 data-i18n="case3_h3">Automasi notifikasi</h3>
-        <p data-i18n="case3_p">Notifikasi satu arah dengan pengaman produksi: daftar penerima, batas kirim, dan jejak audit. Dirancang supaya aman berjalan tanpa pengawasan.</p>
-        <div class="metric"><b>0</b><span data-i18n="case3_m">insiden salah kirim sejak live</span></div>
+        <p class="kind" data-i18n="case3_kind">Notifikasi</p>
+        <h3 data-i18n="case3_h3">Pengiriman notifikasi</h3>
+        <p data-i18n="case3_p">Sistem notifikasi satu arah untuk operasional sebuah perusahaan. Stack-nya layanan backend, daftar penerima, dan batas kirim. Pengiriman lebih terkendali, dengan jejak yang bisa ditelusuri.</p>
       </article>
     </div>
     <p class="svc-note" data-i18n="case_todo">TODO(wayan): studi kasus chatbot WhatsApp menyusul, begitu ada angka sebelum dan sesudah dari proyek nyata.</p>
@@ -1074,7 +1073,7 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
       </details>
       <details>
         <summary data-i18n="faq7_q">Bisa kerja remote dengan klien di luar Bali?</summary>
-        <p data-i18n="faq7_a">Bisa. Sebagian besar klien saya remote, dari Jakarta dan Surabaya sampai luar negeri. Kita bicara lewat WhatsApp, email, atau video call (GMT+8), dengan update tertulis setiap minggu.</p>
+        <p data-i18n="faq7_a">Bisa. Saya kerja dari Bali (GMT+8). Komunikasi lewat WhatsApp, email, atau video call, dengan update tertulis setiap minggu.</p>
       </details>
       <details>
         <summary data-i18n="faq8_q">Apa itu n8n, dan kapan saya membutuhkannya?</summary>
@@ -1155,7 +1154,7 @@ var T = {
     foot_upd: 'Terakhir diperbarui:',
     foot_date: '4 Oktober 2026',
     nav_services: 'Layanan',
-    nav_results: 'Hasil',
+    nav_results: 'Pengalaman Profesional',
     nav_about: 'Tentang',
     nav_cta: 'Konsultasi Gratis',
     hero_eyebrow: 'AI & automasi · Bali, Indonesia · kerja remote',
@@ -1166,15 +1165,14 @@ var T = {
     hero_note: 'Siap terima project baru · balasan < 24 jam · GMT+8',
     console_pre: '<span class="c-comment"># dari chat WhatsApp sampai sistem di belakangnya</span>\n<span class="c-method">POST</span> <span class="c-path">/v1/projects</span>\n{\n  <span class="c-key">"need"</span>:     <span class="c-str">"asisten WhatsApp AI, 24 jam"</span>,\n  <span class="c-key">"connect"</span>:  <span class="c-str">"n8n, pembayaran, database"</span>,\n  <span class="c-key">"runs"</span>:     <span class="c-str">"tanpa harus Anda awasi"</span>\n}\n\n<span class="c-ok">→ 201 Created</span> <span class="c-comment">(42ms)</span>\n{\n  <span class="c-key">"status"</span>:    <span class="c-str">"siap saya kerjakan"</span>,\n  <span class="c-key">"mulai"</span>:     <span class="c-str">"Rp 3,5 jt"</span>,\n  <span class="c-key">"next_step"</span>: <span class="c-str">"lanjut chat di WhatsApp"</span>\n}<span class="caret"></span>',
     console_btn: '▶ Kirim request ini',
-    proof1: 'tahun membangun sistem',
-    proof2: 'sistem di produksi',
+    proof2: 'Berpengalaman di tim software house',
     proof3: 'waktu balasan',
     proof3a: 'jam',
     proof4: 'garansi perbaikan bug',
     proof4a: 'hari',
     about_eyebrow: 'Tentang saya',
     about_h2: 'Dari chat WhatsApp sampai database. Saya yang merakitnya.',
-    about_p1: '<strong>I Wayan Sudharmika</strong> adalah backend engineer di Bali dan Backend Team Leader di <strong>Timedoor</strong>. Sudah 7+ tahun saya membangun sistem yang benar-benar dipakai: chat WhatsApp, automasi, API, sampai database. Pengembangan dibantu AI. Keputusan arsitektur tetap manusia.',
+    about_p1: '<strong>I Wayan Sudharmika</strong> adalah backend engineer di Bali dan Backend Team Leader di <strong>Timedoor</strong>, sebuah software house. Pekerjaan harian saya di sana: sistem backend, automasi, dan API. Pengembangan dibantu AI. Keputusan arsitektur tetap manusia.',
     about_p2: 'Prinsip saya sederhana: <strong>sistem yang baik itu membosankan</strong>. Ia jalan tiap hari, jarang rewel, dan tim Anda bisa merawatnya setelah saya selesai. Karena itu setiap project saya sertakan dokumentasi, testing, dan serah terima yang lengkap.',
     about_li: 'LinkedIn saya ↗',
     lab_title: 'R&D — yang sedang saya kerjakan',
@@ -1205,22 +1203,18 @@ var T = {
     svc3_eta: '2–5 hari',
     svc_cta: 'Bahas di WhatsApp',
     svc_note: '* Angka di atas adalah harga mulai dan dikunci setelah lingkup disepakati. Biaya WhatsApp Meta, model AI, dan server ditagih terpisah, sesuai pemakaian.',
-    case_eyebrow: 'Hasil kerja',
-    case_h2: 'Sistem yang dipakai, bukan cuma yang diluncurkan.',
-    case_sub: 'Tiga contoh. Angka dan detail teknisnya saya jelaskan saat konsultasi.',
-    case1_kind: 'Automasi · operasional internal',
+    case_eyebrow: 'Software house',
+    case_h2: 'Pengalaman Profesional',
+    case_sub: 'Dikerjakan sebagai backend engineer / team lead di sebuah software house. Detail klien dirahasiakan.',
+    case1_kind: 'Operasional internal',
     case1_h3: 'Platform operasional internal',
-    case1_p: 'Approval dan notifikasi untuk operasional harian. Yang tadinya bolak-balik chat manual sekarang jalan sendiri, dengan jejak audit yang lengkap.',
-    case1_m: 'waktu proses approval harian',
-    case2_kind: 'SaaS · fondasi backend',
-    case2_h3: 'SaaS MVP Backend',
-    case2_p: 'API, login, dan arsitektur yang siap billing untuk tim kecil yang perlu launch cepat — tanpa utang teknis yang menahan rilis berikutnya.',
-    case2_w: 'minggu',
-    case2_m: 'dari kickoff sampai production',
-    case3_kind: 'Keandalan · notifikasi',
-    case3_h3: 'Automasi notifikasi',
-    case3_p: 'Notifikasi satu arah dengan pengaman produksi: daftar penerima, batas kirim, dan jejak audit. Dirancang supaya aman berjalan tanpa pengawasan.',
-    case3_m: 'insiden salah kirim sejak live',
+    case1_p: 'Sistem approval dan notifikasi untuk operasional harian di sebuah perusahaan. Stack-nya API, database relasional, dan pencatatan audit. Alur approval menjadi lebih tertata.',
+    case2_kind: 'Produk SaaS',
+    case2_h3: 'Fondasi backend SaaS',
+    case2_p: 'Fondasi backend untuk produk SaaS di sebuah tim produk: login, API, dan data yang siap untuk penagihan. Stack-nya API, database, dan deploy bertahap. Timnya bisa lanjut membangun di atas fondasi itu.',
+    case3_kind: 'Notifikasi',
+    case3_h3: 'Pengiriman notifikasi',
+    case3_p: 'Sistem notifikasi satu arah untuk operasional sebuah perusahaan. Stack-nya layanan backend, daftar penerima, dan batas kirim. Pengiriman lebih terkendali, dengan jejak yang bisa ditelusuri.',
     proc_eyebrow: 'Cara kerja',
     proc_h2: 'Empat langkah, dan Anda selalu tahu posisinya.',
     proc_sub: 'Tiap minggu ada laporan tertulis, jadi Anda tidak perlu menebak progresnya.',
@@ -1328,7 +1322,7 @@ var T = {
     care_eta: 'Retainer bulanan',
     case_todo: 'TODO(wayan): studi kasus chatbot WhatsApp menyusul, begitu ada angka sebelum dan sesudah dari proyek nyata.',
     faq7_q: 'Bisa kerja remote dengan klien di luar Bali?',
-    faq7_a: 'Bisa. Sebagian besar klien saya remote, dari Jakarta dan Surabaya sampai luar negeri. Kita bicara lewat WhatsApp, email, atau video call (GMT+8), dengan update tertulis setiap minggu.',
+    faq7_a: 'Bisa. Saya kerja dari Bali (GMT+8). Komunikasi lewat WhatsApp, email, atau video call, dengan update tertulis setiap minggu.',
     faq8_q: 'Apa itu n8n, dan kapan saya membutuhkannya?',
     faq8_a: 'n8n menyambungkan aplikasi Anda: pembayaran masuk, stok berubah, laporan terkirim, tanpa copy-paste. Cocok kalau kerja harian masih berpindah manual antara WhatsApp, spreadsheet, payment gateway, dan sistem internal.',
     f_opt6: 'Belum yakin — saya butuh saran',
@@ -1346,7 +1340,7 @@ var T = {
     foot_upd: 'Last updated:',
     foot_date: '4 October 2026',
     nav_services: 'Services',
-    nav_results: 'Results',
+    nav_results: 'Professional Experience',
     nav_about: 'About',
     nav_cta: 'Free consultation',
     hero_eyebrow: 'AI & automation · Bali, Indonesia · remote',
@@ -1357,15 +1351,14 @@ var T = {
     hero_note: 'Open to new projects · reply < 24h · GMT+8',
     console_pre: '<span class="c-comment"># from a WhatsApp chat to the system behind it</span>\n<span class="c-method">POST</span> <span class="c-path">/v1/projects</span>\n{\n  <span class="c-key">"need"</span>:     <span class="c-str">"a WhatsApp AI assistant, 24/7"</span>,\n  <span class="c-key">"connect"</span>:  <span class="c-str">"n8n, payments, database"</span>,\n  <span class="c-key">"runs"</span>:     <span class="c-str">"without you watching it"</span>\n}\n\n<span class="c-ok">→ 201 Created</span> <span class="c-comment">(42ms)</span>\n{\n  <span class="c-key">"status"</span>:    <span class="c-str">"ready for me to build"</span>,\n  <span class="c-key">"from"</span>:      <span class="c-str">"about US$600"</span>,\n  <span class="c-key">"next_step"</span>: <span class="c-str">"continue on WhatsApp"</span>\n}<span class="caret"></span>',
     console_btn: '▶ Send this request',
-    proof1: 'years building systems',
-    proof2: 'systems in production',
+    proof2: 'Experienced on a software-house team',
     proof3: 'reply time',
     proof3a: 'h',
     proof4: 'bug-fix warranty',
     proof4a: 'days',
     about_eyebrow: 'About',
     about_h2: 'From the WhatsApp chat to the database. I assemble it.',
-    about_p1: 'I\'m <strong>I Wayan Sudharmika</strong>, a backend engineer in Bali and Backend Team Leader at <strong>Timedoor</strong>. For 7+ years I have built systems people actually use: WhatsApp chats, automation, APIs, and databases. Development is AI-assisted. Architecture decisions stay human.',
+    about_p1: 'I\'m <strong>I Wayan Sudharmika</strong>, a backend engineer in Bali and Backend Team Leader at <strong>Timedoor</strong>, a software house. My day-to-day work there is backend systems, automation, and APIs. Development is AI-assisted. Architecture decisions stay human.',
     about_p2: 'The rule is simple: <strong>a good system is a boring one</strong>. It runs every day, it rarely acts up, and your team can look after it once I leave. Every project includes documentation, tests, and a full handover.',
     about_li: 'My LinkedIn ↗',
     lab_title: 'R&D — what I am building now',
@@ -1396,22 +1389,18 @@ var T = {
     svc3_eta: '2–5 days',
     svc_cta: 'Talk it through on WhatsApp',
     svc_note: '* Figures above are starting prices, fixed once we agree what is included. WhatsApp Meta fees, AI model costs, and servers are billed separately, at cost.',
-    case_eyebrow: 'Selected work',
-    case_h2: 'Systems that people keep using after launch.',
-    case_sub: 'Three examples. I will walk through the numbers and the detail on a call.',
-    case1_kind: 'Automation · internal operations',
+    case_eyebrow: 'Software house',
+    case_h2: 'Professional Experience',
+    case_sub: 'Built as a backend engineer and team lead at a software house. Client details stay confidential.',
+    case1_kind: 'Internal operations',
     case1_h3: 'Internal operations platform',
-    case1_p: 'Approvals and notifications for daily operations. What used to bounce around in manual chat now runs on its own, with a full audit log.',
-    case1_m: 'daily approval processing time',
-    case2_kind: 'SaaS · backend foundation',
-    case2_h3: 'SaaS MVP Backend',
-    case2_p: 'API, login, and billing-ready architecture for a small team that needed to launch soon — without technical debt that slows the next release.',
-    case2_w: 'weeks',
-    case2_m: 'from kickoff to production',
-    case3_kind: 'Reliability · notifications',
-    case3_h3: 'Notification automation',
-    case3_p: 'A one-way notification system with production guardrails: an allowlist, rate limits, and an audit log. Built so it can run safely without someone watching it.',
-    case3_m: 'wrong-recipient incidents since launch',
+    case1_p: 'Approvals and notifications for day-to-day operations at a company. The stack is an API, a relational database, and an audit log. The approval flow is more orderly than the manual process.',
+    case2_kind: 'SaaS product',
+    case2_h3: 'SaaS backend foundation',
+    case2_p: 'A backend foundation for a SaaS product on a small product team: login, an API, and data that can take billing. The stack is an API, a database, and staged deploys. The team can keep building on that base.',
+    case3_kind: 'Notifications',
+    case3_h3: 'Notification delivery',
+    case3_p: 'A one-way notification system for a company\'s operations. The stack is a backend service, a recipient list, and a send limit. Delivery is more controlled, with a trail that can be checked.',
     proc_eyebrow: 'How it works',
     proc_h2: 'Four steps, and you always know where things stand.',
     proc_sub: 'You get a written update every week, so you never have to guess the progress.',
@@ -1519,7 +1508,7 @@ var T = {
     care_eta: 'Monthly retainer',
     case_todo: 'TODO(wayan): a WhatsApp chatbot case study will go here once there are real before-and-after numbers.',
     faq7_q: 'Can you work remotely with clients outside Bali?',
-    faq7_a: 'Yes. Most of my clients are remote, from Jakarta and Surabaya to other countries. We talk on WhatsApp, email, or a video call (GMT+8), and you get a written update every week.',
+    faq7_a: 'Yes. I work from Bali (GMT+8). We can talk on WhatsApp, email, or a video call, with a written update every week.',
     faq8_q: 'What is n8n, and when do I need it?',
     faq8_a: 'n8n connects your apps: a payment arrives, stock changes, a report goes out, without copy-paste. It fits when the day is still a manual hop between WhatsApp, a spreadsheet, a payment gateway, and an internal system.',
     f_opt6: 'Not sure yet — I need advice',

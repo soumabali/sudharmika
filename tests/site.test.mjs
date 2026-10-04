@@ -68,9 +68,14 @@ test("placeholder prices and metrics stay, and testimonials are removed", () => 
   assert.match(T.en.faq2_a, /US\$45–60/);
   assert.match(T.en.faq2_a, /US\$300/);
   assert.match(T.id.faq5_a, /30 hari/);
-  assert.match(html, /7\+/);
-  assert.match(html, /30\+/);
-  assert.match(html, /−70%/);
+  assert.equal(T.id.case_h2, "Pengalaman Profesional");
+  assert.equal(T.en.case_h2, "Professional Experience");
+  assert.match(T.id.case_sub, /Detail klien dirahasiakan/);
+  assert.match(T.id.faq7_a, /Saya kerja dari Bali/);
+  assert.doesNotMatch(T.id.faq7_a, /Sebagian besar klien saya/);
+  assert.doesNotMatch(html, /7\+|30\+|−70%|insiden salah kirim|systems in production|Most of my clients/);
+  assert.match(html, /&lt;24/);
+  assert.match(html, /30 <span data-i18n="proof4a">hari<\/span>/);
 });
 
 test("visible copy, dictionary, and FAQPage schema stay in sync", () => {
