@@ -1,11 +1,35 @@
 # Sudharmika
 
-> I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan bagian dari tim engineering Timedoor. Ia mengerjakan jasa pembuatan API (mulai Rp 15 jt, 2–4 minggu), integrasi sistem dan automasi n8n/AI (mulai Rp 7 jt per workflow, 1–2 minggu), serta backend SaaS MVP (mulai Rp 35 jt, 4–8 minggu). Setiap project termasuk dokumentasi, testing, dan garansi bug-fix 30 hari. Pengerjaan dibantu AI (Claude, Claude Code, n8n, Hermes, OpenClaw); keputusan arsitektur tetap manusia. Klien remote dilayani di seluruh Indonesia dan luar negeri (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
+> I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan Backend Team Leader di Timedoor. Ia merakit AI dan automasi dari chat WhatsApp sampai sistem di belakangnya: asisten WhatsApp AI, automasi n8n, asisten AI self-hosted (OpenClaw dan Hermes Agent dari Nous Research), website, dan backend custom. Pengerjaan dibantu AI (Claude, Claude Code). Keputusan arsitektur tetap manusia. Setiap project termasuk dokumentasi dan garansi bug-fix 30 hari. Klien remote dilayani di Indonesia dan luar negeri (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
 
-## Halaman Utama
-- [Beranda & Layanan (ID/EN)](https://sudharmika.com/): Paket layanan, harga, studi kasus, proses kerja, dan FAQ
-- [LinkedIn](https://www.linkedin.com/in/wayan-sudharmika-72820b109/): Profil profesional dan pengalaman kerja
-- [GitHub](https://github.com/soumabali): Repositori dan open source
+## Layanan dan harga mulai
+
+Harga di bawah adalah harga mulai dalam rupiah dan dikunci setelah lingkup disepakati. Biaya WhatsApp Meta, model AI, dan server ditagih terpisah, sesuai pemakaian. Sejak 1 Oktober 2026, Meta memberi kuota gratis 1.000 pesan layanan per nomor tiap bulan, lalu sekitar Rp 356,65 per pesan di Indonesia.
+
+| Layanan | Harga mulai (ID) | Setara / harga internasional | Timeline |
+|---|---|---|---|
+| Asisten WhatsApp AI 24 Jam — Starter (paling sering diminta) | Rp 3,5 jt | about US$600 | 5–7 hari |
+| Asisten WhatsApp AI 24 Jam — Bisnis, terhubung sistem | Rp 8 jt | — | 2–3 minggu |
+| Kelola Asisten WhatsApp AI (opsional) | Rp 500rb/bulan | — | bulanan |
+| Automasi Operasional Bisnis (n8n) — Starter, 1–2 workflow | Rp 5 jt | about US$800, or US$40–50/hour | 1–3 minggu |
+| Automasi Operasional Bisnis — Growth | Rp 15 jt | — | 1–3 minggu |
+| Add-on integrasi payment gateway | Rp 1,5 jt | — | — |
+| Asisten AI Self-Hosted & Aman (OpenClaw / Hermes Agent) | Rp 6 jt | US$500 / US$1,500 | 2–5 hari |
+| Kelola asisten AI self-hosted | Rp 1 jt/bulan | about US$150/month | bulanan |
+| Website Bisnis Penghasil Leads (WordPress atau custom) | Rp 4,5 jt | quoted in rupiah | 1–3 minggu |
+| Bundel website + Asisten WhatsApp AI Starter | Rp 7,5 jt | quoted in rupiah | 1–3 minggu |
+| Sistem & Backend Custom | Rp 15 jt | US$45–60/hour | 2–4 minggu |
+| SaaS MVP | Rp 35 jt | US$45–60/hour | 4–8 minggu |
+| Retainer Rawat & Kembangkan | Rp 2,5 jt/bulan | US$300+/month | bulanan |
+
+Hermes Agent adalah agent open-source dari Nous Research. Tool internal monorepo pemilik situs (dev, build, test, lint) terpisah dan tidak dijual sebagai Hermes Agent.
+
+## Halaman
+
+- [Beranda (ID/EN)](https://sudharmika.com/): layanan, harga, studi kasus, proses, dan FAQ. Bahasa Inggris: https://sudharmika.com/en/
+- [LinkedIn](https://www.linkedin.com/in/wayan-sudharmika-72820b109/)
+- [GitHub](https://github.com/soumabali)
 
 ## Stack
-Laravel, Node.js, Nest.js, TypeScript, PostgreSQL, Redis, Docker, Cloudflare, GitHub Actions, Claude / Claude Code, n8n, Hermes, OpenClaw
+
+Laravel, Node.js, Nest.js, TypeScript, PostgreSQL, Redis, Docker, Cloudflare, GitHub Actions, WordPress, Claude / Claude Code, n8n, OpenClaw, Hermes Agent (Nous Research)
