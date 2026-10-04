@@ -1,6 +1,6 @@
 # Sudharmika
 
-> I Wayan Sudharmika adalah backend engineer & automation specialist berbasis di Bali, Indonesia (juga bagian dari tim engineering Timedoor). Jasa: Backend API Development (mulai Rp 15 jt, 2–4 minggu), Integrasi & Automasi Sistem termasuk automasi berbasis AI dan n8n (mulai Rp 7 jt/workflow, 1–2 minggu), dan SaaS MVP Backend (mulai Rp 35 jt, 4–8 minggu). Semua project termasuk dokumentasi, testing, dan garansi bug-fix 30 hari. Menggunakan AI-assisted development workflow (Claude, Claude Code, n8n, Hermes, OpenClaw) untuk delivery lebih cepat tanpa mengorbankan kualitas. Melayani klien remote di seluruh Indonesia dan internasional (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
+> I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan bagian dari tim engineering Timedoor. Ia mengerjakan jasa pembuatan API (mulai Rp 15 jt, 2–4 minggu), integrasi sistem dan automasi n8n/AI (mulai Rp 7 jt per workflow, 1–2 minggu), serta backend SaaS MVP (mulai Rp 35 jt, 4–8 minggu). Setiap project termasuk dokumentasi, testing, dan garansi bug-fix 30 hari. Pengerjaan dibantu AI (Claude, Claude Code, n8n, Hermes, OpenClaw); keputusan arsitektur tetap manusia. Klien remote dilayani di seluruh Indonesia dan luar negeri (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
 
 ## Halaman Utama
 - [Beranda & Layanan (ID/EN)](https://sudharmika.com/): Paket layanan, harga, studi kasus, proses kerja, dan FAQ

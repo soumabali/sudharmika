@@ -40,6 +40,37 @@ test("i18n dictionaries have the same keys", () => {
   assert.deepEqual(Object.keys(T.id).sort(), Object.keys(T.en).sort());
 });
 
+test("titles and descriptions stay within the search snippet budget", () => {
+  const chars = (value) => [...value].length;
+  for (const lang of ["id", "en"]) {
+    assert.ok(chars(T[lang]._title) >= 50 && chars(T[lang]._title) <= 60, T[lang]._title);
+    assert.ok(chars(T[lang]._desc) >= 140 && chars(T[lang]._desc) <= 160, T[lang]._desc);
+  }
+});
+
+test("placeholder prices, metrics, and testimonial claims are unchanged", () => {
+  assert.equal(T.id.quote1, "Eksekusinya cepat, tapi tetap rapi. Enak buat di-maintain jangka panjang.");
+  assert.equal(T.id.quote2, "Yang paling kerasa: sistem jadi stabil, tim frontend juga lebih mudah jalan karena API-nya jelas.");
+  assert.equal(T.en.quote1, "Fast execution, but still clean. Easy to maintain long-term.");
+  assert.equal(
+    T.en.quote2,
+    "The biggest difference: the system became stable, and the frontend team moved faster because the API was clear.",
+  );
+  assert.equal(T.id.quote1_c, "— Founder, SaaS Project");
+  assert.equal(T.id.quote2_c, "— Product Lead, Internal Platform");
+  assert.match(T.id.faq1_a, /Rp 15 juta/);
+  assert.match(T.id.faq1_a, /Rp 7 juta/);
+  assert.match(T.id.faq1_a, /Rp 35 juta/);
+  assert.match(T.en.faq1_a, /~USD 900/);
+  assert.match(T.id.faq2_a, /2–4 minggu/);
+  assert.match(T.id.faq2_a, /1–2 minggu/);
+  assert.match(T.id.faq2_a, /4–8 minggu/);
+  assert.match(T.id.faq5_a, /30 hari/);
+  assert.match(html, /7\+/);
+  assert.match(html, /30\+/);
+  assert.match(html, /−70%/);
+});
+
 test("visible copy, dictionary, and FAQPage schema stay in sync", () => {
   const staticDom = new JSDOM(html, { url: "https://sudharmika.com/" });
   const { document } = staticDom.window;
@@ -151,10 +182,10 @@ test("#en opens English and the lead form builds a structured WhatsApp message",
     [
       "Hi Wayan, I'm Ayu from Toko.",
       "",
-      "Need: Not sure yet — need advice",
+      "Need: Not sure yet — I need advice",
       "Details: Need a payment workflow",
       "",
-      "I found you via sudharmika.com — could I get an estimate?",
+      "I got this contact from sudharmika.com. Could you send an estimate?",
     ].join("\n"),
   );
   assert.equal(encodeURIComponent(text), opened.slice(opened.indexOf("?text=") + 6));
@@ -185,7 +216,7 @@ test("Indonesian lead form omits an empty business name", () => {
       "Kebutuhan: Integrasi & Automasi Sistem",
       "Detail: -",
       "",
-      "Saya menemukan Anda lewat sudharmika.com — boleh minta estimasi?",
+      "Kontak ini saya dapat dari sudharmika.com. Boleh minta estimasi?",
     ].join("\n"),
   );
 });
@@ -227,7 +258,7 @@ test("robots, sitemap, llms, and headers are ready for the export root", () => {
   assert.match(sitemap, /hreflang="id"/);
   assert.match(sitemap, /hreflang="en"[^>]+https:\/\/sudharmika\.com\/en\//);
   assert.match(sitemap, /hreflang="x-default"/);
-  assert.match(sitemap, /<lastmod>2026-07-06<\/lastmod>/);
+  assert.match(sitemap, /<lastmod>2026-10-04<\/lastmod>/);
 
   const llms = fs.readFileSync(path.join(root, "public/llms.txt"), "utf8");
   assert.match(llms, /I Wayan Sudharmika/);
