@@ -1,38 +1,46 @@
-# sudharmika
+# sudharmika.com
 
-Company profile website untuk **I Wayan Sudharmika** (Backend Programmer), dibangun dengan Next.js static export dan siap deploy ke Cloudflare Pages.
+Personal site and service landing page for **I Wayan Sudharmika**, backend engineer and automation specialist in Bali. The page is Indonesian by default, with an English toggle (`?lang=en` or `#en`).
+
+The visual source of truth is `src/site/index.html`. The Next.js app (static export) inlines that document so `npm run build` still emits the Cloudflare Pages `out/` directory.
 
 ## Stack
-- Next.js 14 (App Router)
-- Tailwind + daisyUI
-- Deployment: Cloudflare Pages
+- Next.js 14 static export
+- No client UI framework on the page itself: one inline i18n script plus a tiny hydration boot
+- Deployment: Cloudflare Pages via `.github/workflows/deploy-cloudflare-pages.yml`
 
-## Struktur Direktori
-- `src/app/` → halaman + layout
-- `public/` → aset statis
-- `.github/workflows/` → CI/CD deploy ke Cloudflare Pages
-- `out/` → hasil static export (generated)
+## Directory
+- `src/site/index.html` — landing markup, design CSS, copy, JSON-LD, and i18n
+- `src/app/` — static export shell that publishes that document
+- `public/` — `robots.txt`, `sitemap.xml`, `llms.txt`, `_headers`, icons, og image
+- `out/` — generated static export (not committed)
 
-## Run lokal
+## Local
 ```bash
 npm ci
 npm run dev
 ```
 
-## Build produksi (static)
+## Production build
 ```bash
 npm run build
 ```
-Output ada di folder `out/`.
 
-## Standard Security (LOCK)
-- Jangan hardcode credential/token di file.
-- Wajib set di GitHub Secrets:
-  - `CLOUDFLARE_API_TOKEN`
-  - `CLOUDFLARE_ACCOUNT_ID`
+`out/` must contain `index.html`, `robots.txt`, `sitemap.xml`, `llms.txt`, and `_headers`.
 
-## Deploy Flow
-1. Push ke branch `main`
-2. GitHub Action `deploy-cloudflare-pages` jalan otomatis
-3. Cloudflare Pages deploy project `sudharmika` dari folder `out`
-4. Bind custom domain `sudharmika.com`
+## Checks
+```bash
+npm run quality-gate
+```
+
+## Deploy
+1. Merge to `main`
+2. GitHub Action `deploy-cloudflare-pages` runs
+3. Cloudflare Pages project `sudharmika` publishes `out/`
+4. Custom domain: `sudharmika.com`
+
+Secrets (never commit them):
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Handoff notes, design tokens, and content that still needs the owner's confirmation are in `CLAUDE.md`.
