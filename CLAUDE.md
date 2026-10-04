@@ -85,7 +85,7 @@ Hero kanan = **API console interaktif**: `POST /v1/projects` → `201 Created`, 
 5. **Layanan (`#layanan`)** — 3 paket + catatan retainer
 6. **Hasil Kerja (`#hasil`)** — 3 studi kasus dengan metrik
 7. **Proses (`#proses`)** — 4 tahap: Discovery → Blueprint → Build → Stabilize
-8. **Testimonial** — 2 quote
+8. **Testimonial** — dihapus sampai ada klien nyata. Jangan tampilkan quote palsu.
 9. **Stack** — chips; AI tools diberi class `.ai` (border cobalt)
 10. **FAQ (`#faq`)** — 6 pertanyaan, `<details>/<summary>`, sinkron dengan FAQPage schema
 11. **Kontak (`#kontak`)** — kartu gelap: info + lead form → WhatsApp deep link
@@ -159,7 +159,7 @@ Crawler mengindeks HTML awal (Bahasa Indonesia). Untuk SEO EN maksimal, **fase b
 - [ ] Angka proof strip: `7+ tahun`, `30+ sistem` → ganti angka real
 - [ ] Harga 3 paket (Rp 15jt / 7jt / 35jt) → konfirmasi
 - [ ] Metrik studi kasus (−70%, 6 minggu, 0 insiden) → ganti data real; studi kasus #1 & #3 ditulis generik dari project automasi internal
-- [ ] 2 testimonial → ganti dengan quote klien asli + nama/izin
+- [ ] Testimonial dihapus sampai ada klien nyata. Kembalikan hanya dengan quote asli plus nama dan izin.
 - [ ] Konversi USD di FAQ EN (~USD 900) → sesuaikan kurs
 
 ### Brand voice

@@ -48,16 +48,13 @@ test("titles and descriptions stay within the search snippet budget", () => {
   }
 });
 
-test("placeholder prices, metrics, and testimonial claims are unchanged", () => {
-  assert.equal(T.id.quote1, "Eksekusinya cepat, tapi tetap rapi. Enak buat di-maintain jangka panjang.");
-  assert.equal(T.id.quote2, "Yang paling kerasa: sistem jadi stabil, tim frontend juga lebih mudah jalan karena API-nya jelas.");
-  assert.equal(T.en.quote1, "Fast execution, but still clean. Easy to maintain long-term.");
-  assert.equal(
-    T.en.quote2,
-    "The biggest difference: the system became stable, and the frontend team moved faster because the API was clear.",
-  );
-  assert.equal(T.id.quote1_c, "— Founder, SaaS Project");
-  assert.equal(T.id.quote2_c, "— Product Lead, Internal Platform");
+test("placeholder prices and metrics stay, and testimonials are removed", () => {
+  for (const key of ["quote_eyebrow", "quote_h2", "quote1", "quote1_c", "quote2", "quote2_c"]) {
+    assert.equal(key in T.id, false, key);
+    assert.equal(key in T.en, false, key);
+  }
+  assert.doesNotMatch(html, /Kata klien|From clients|Founder, SaaS Project|Product Lead, Internal Platform/);
+  assert.doesNotMatch(html, /"@type": "Review"/);
   assert.match(T.id.faq1_a, /Rp 3,5 juta/);
   assert.match(T.id.faq1_a, /Rp 8 juta/);
   assert.match(T.id.faq1_a, /Rp 356,65/);

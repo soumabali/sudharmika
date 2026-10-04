@@ -638,13 +638,6 @@ header{
 .step p{font-size:.9rem;color:var(--muted)}
 .step .dur{font-family:var(--mono);font-size:.72rem;color:var(--status);display:block;margin-top:10px}
 
-/* ---------- Testimonials ---------- */
-.quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
-.quote p{font-size:1.05rem;margin-bottom:16px}
-.quote p::before{content:"“";color:var(--cobalt);font-family:var(--display);font-weight:800;font-size:1.4em;margin-right:2px}
-.quote cite{font-style:normal;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
-
 /* ---------- Stack ---------- */
 .stack{display:flex;flex-wrap:wrap;gap:10px}
 .stack span{
@@ -714,7 +707,6 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
   .hero-grid,.contact-grid,.about-grid{grid-template-columns:1fr}
   .svc-grid,.case-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
-  .quotes{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .contact{padding:44px 28px}
@@ -723,7 +715,7 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
   .wa-float{padding:16px}
 }
 
-.hero-grid > *,.about-grid > *,.contact-grid > *,.svc-grid > *,.case-grid > *,.quotes > *{min-width:0}
+.hero-grid > *,.about-grid > *,.contact-grid > *,.svc-grid > *,.case-grid > *{min-width:0}
 @media (max-width:540px){
   .wrap{padding:0 16px}
   .nav{height:auto;min-height:64px;flex-wrap:wrap;align-items:center;padding:10px 0 12px;row-gap:10px}
@@ -1032,26 +1024,6 @@ footer{padding:36px 0 110px;border-top:1px solid var(--line);margin-top:88px}
   </div>
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section" style="padding-top:0">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow" data-i18n="quote_eyebrow">Kata klien</span>
-      <h2 data-i18n="quote_h2">Setelah sistemnya jalan, ini yang mereka bilang.</h2>
-    </div>
-    <div class="quotes">
-      <blockquote class="quote">
-        <p data-i18n="quote1">Eksekusinya cepat, tapi tetap rapi. Enak buat di-maintain jangka panjang.</p>
-        <cite data-i18n="quote1_c">— Founder, SaaS Project</cite>
-      </blockquote>
-      <blockquote class="quote">
-        <p data-i18n="quote2">Yang paling kerasa: sistem jadi stabil, tim frontend juga lebih mudah jalan karena API-nya jelas.</p>
-        <cite data-i18n="quote2_c">— Product Lead, Internal Platform</cite>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
 <!-- ================= STACK ================= -->
 <section class="section" style="padding-top:0">
   <div class="wrap">
@@ -1260,12 +1232,6 @@ var T = {
     proc3_d: 'sesuai paket',
     proc4_p: 'Pemantauan, pengamanan, dokumentasi, lalu serah terima penuh. Kodenya 100% milik Anda.',
     proc4_d: '+ garansi 30 hari',
-    quote_eyebrow: 'Kata klien',
-    quote_h2: 'Setelah sistemnya jalan, ini yang mereka bilang.',
-    quote1: 'Eksekusinya cepat, tapi tetap rapi. Enak buat di-maintain jangka panjang.',
-    quote1_c: '— Founder, SaaS Project',
-    quote2: 'Yang paling kerasa: sistem jadi stabil, tim frontend juga lebih mudah jalan karena API-nya jelas.',
-    quote2_c: '— Product Lead, Internal Platform',
     stack_eyebrow: 'Teknologi',
     stack_h2: 'Yang saya pakai supaya sistemnya tahan di produksi',
     faq_h2: 'Sebelum mulai, ini yang biasanya ditanya',
@@ -1457,12 +1423,6 @@ var T = {
     proc3_d: 'per package',
     proc4_p: 'Monitoring, hardening, documentation, then a full handover. The code is 100% yours.',
     proc4_d: '+ 30-day warranty',
-    quote_eyebrow: 'From clients',
-    quote_h2: 'What they said after the system was running.',
-    quote1: 'Fast execution, but still clean. Easy to maintain long-term.',
-    quote1_c: '— Founder, SaaS Project',
-    quote2: 'The biggest difference: the system became stable, and the frontend team moved faster because the API was clear.',
-    quote2_c: '— Product Lead, Internal Platform',
     stack_eyebrow: 'Stack',
     stack_h2: 'What I use so the system holds up in production',
     faq_h2: 'What people ask before we start',
