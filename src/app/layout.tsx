@@ -27,26 +27,14 @@ export default function RootLayout({
         <meta property="og:site_name" content="Sudharmika" />
         <meta property="og:locale" content="id_ID" />
         <meta property="og:locale:alternate" content="en_US" />
-        <meta
-          property="og:title"
-          content="I Wayan Sudharmika — Backend Engineer & Automation Specialist"
-        />
-        <meta
-          property="og:description"
-          content="API yang stabil, automasi yang jalan sendiri, backend SaaS yang siap scale. Konsultasi gratis via WhatsApp, respon < 24 jam."
-        />
+        <meta property="og:title" content={site.title} />
+        <meta property="og:description" content={site.description} />
         <meta property="og:image" content="https://sudharmika.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="I Wayan Sudharmika — Backend Engineer & Automation Specialist"
-        />
-        <meta
-          name="twitter:description"
-          content="API yang stabil, automasi yang jalan sendiri, backend SaaS yang siap scale."
-        />
+        <meta name="twitter:title" content={site.title} />
+        <meta name="twitter:description" content={site.description} />
         <meta name="twitter:image" content="https://sudharmika.com/og-image.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

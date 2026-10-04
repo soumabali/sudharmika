@@ -40,6 +40,42 @@ test("i18n dictionaries have the same keys", () => {
   assert.deepEqual(Object.keys(T.id).sort(), Object.keys(T.en).sort());
 });
 
+test("titles and descriptions stay within the search snippet budget", () => {
+  const chars = (value) => [...value].length;
+  for (const lang of ["id", "en"]) {
+    assert.ok(chars(T[lang]._title) >= 50 && chars(T[lang]._title) <= 60, T[lang]._title);
+    assert.ok(chars(T[lang]._desc) >= 140 && chars(T[lang]._desc) <= 160, T[lang]._desc);
+  }
+});
+
+test("placeholder prices, metrics, and testimonial claims are unchanged", () => {
+  assert.equal(T.id.quote1, "Eksekusinya cepat, tapi tetap rapi. Enak buat di-maintain jangka panjang.");
+  assert.equal(T.id.quote2, "Yang paling kerasa: sistem jadi stabil, tim frontend juga lebih mudah jalan karena API-nya jelas.");
+  assert.equal(T.en.quote1, "Fast execution, but still clean. Easy to maintain long-term.");
+  assert.equal(
+    T.en.quote2,
+    "The biggest difference: the system became stable, and the frontend team moved faster because the API was clear.",
+  );
+  assert.equal(T.id.quote1_c, "— Founder, SaaS Project");
+  assert.equal(T.id.quote2_c, "— Product Lead, Internal Platform");
+  assert.match(T.id.faq1_a, /Rp 3,5 juta/);
+  assert.match(T.id.faq1_a, /Rp 8 juta/);
+  assert.match(T.id.faq1_a, /Rp 356,65/);
+  assert.match(T.id.faq2_a, /Rp 5 juta/);
+  assert.match(T.id.faq2_a, /Rp 15 juta/);
+  assert.match(T.id.faq2_a, /Rp 35 juta/);
+  assert.match(T.id.faq2_a, /Rp 2,5 juta/);
+  assert.match(T.en.faq1_a, /US\$600/);
+  assert.match(T.en.faq2_a, /US\$800/);
+  assert.match(T.en.faq2_a, /US\$1,500/);
+  assert.match(T.en.faq2_a, /US\$45–60/);
+  assert.match(T.en.faq2_a, /US\$300/);
+  assert.match(T.id.faq5_a, /30 hari/);
+  assert.match(html, /7\+/);
+  assert.match(html, /30\+/);
+  assert.match(html, /−70%/);
+});
+
 test("visible copy, dictionary, and FAQPage schema stay in sync", () => {
   const staticDom = new JSDOM(html, { url: "https://sudharmika.com/" });
   const { document } = staticDom.window;
@@ -72,7 +108,17 @@ test("visible copy, dictionary, and FAQPage schema stay in sync", () => {
   );
   const graph = JSON.parse(jsonText)["@graph"];
   const faq = graph.find((node) => node["@type"] === "FAQPage");
-  assert.equal(faq.mainEntity.length, 6);
+  assert.equal(faq.mainEntity.length, 8);
+  const offers = graph
+    .find((node) => node["@type"] === "ProfessionalService")
+    .hasOfferCatalog.itemListElement;
+  assert.equal(offers.length, 13);
+  for (const offer of offers) {
+    assert.equal(offer.priceCurrency, "IDR");
+    assert.equal(offer.priceSpecification.priceCurrency, "IDR");
+    assert.equal(offer.price, offer.priceSpecification.minPrice);
+    assert.match(offer.price, /^\d+$/);
+  }
   faq.mainEntity.forEach((entity, index) => {
     const n = index + 1;
     assert.equal(entity.name, T.id[`faq${n}_q`]);
@@ -90,7 +136,7 @@ test("English toggle and WhatsApp links use the encoded wa.me deep link", () => 
   assert.equal(document.documentElement.lang, "en");
   assert.equal(document.title, T.en._title);
   assert.equal(document.getElementById("metaDesc").getAttribute("content"), T.en._desc);
-  assert.match(document.querySelector("h1").textContent, /stable/);
+  assert.match(document.querySelector("h1").textContent, /holds up/);
   assert.doesNotMatch(document.querySelector(".lead").textContent, /Saya I Wayan/);
   assert.equal(document.getElementById("langEN").classList.contains("active"), true);
   assert.equal(document.getElementById("langEN").getAttribute("aria-pressed"), "true");
@@ -151,10 +197,10 @@ test("#en opens English and the lead form builds a structured WhatsApp message",
     [
       "Hi Wayan, I'm Ayu from Toko.",
       "",
-      "Need: Not sure yet — need advice",
+      "Need: Custom backend or SaaS MVP",
       "Details: Need a payment workflow",
       "",
-      "I found you via sudharmika.com — could I get an estimate?",
+      "I got this contact from sudharmika.com. Could you send an estimate?",
     ].join("\n"),
   );
   assert.equal(encodeURIComponent(text), opened.slice(opened.indexOf("?text=") + 6));
@@ -182,10 +228,10 @@ test("Indonesian lead form omits an empty business name", () => {
     [
       "Halo Wayan, saya Ayu.",
       "",
-      "Kebutuhan: Integrasi & Automasi Sistem",
+      "Kebutuhan: Automasi operasional",
       "Detail: -",
       "",
-      "Saya menemukan Anda lewat sudharmika.com — boleh minta estimasi?",
+      "Kontak ini saya dapat dari sudharmika.com. Boleh minta estimasi?",
     ].join("\n"),
   );
 });
@@ -227,7 +273,7 @@ test("robots, sitemap, llms, and headers are ready for the export root", () => {
   assert.match(sitemap, /hreflang="id"/);
   assert.match(sitemap, /hreflang="en"[^>]+https:\/\/sudharmika\.com\/en\//);
   assert.match(sitemap, /hreflang="x-default"/);
-  assert.match(sitemap, /<lastmod>2026-07-06<\/lastmod>/);
+  assert.match(sitemap, /<lastmod>2026-10-04<\/lastmod>/);
 
   const llms = fs.readFileSync(path.join(root, "public/llms.txt"), "utf8");
   assert.match(llms, /I Wayan Sudharmika/);
