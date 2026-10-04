@@ -1,6 +1,6 @@
 # Sudharmika
 
-> I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan Backend Team Leader di Timedoor. Ia merakit AI dan automasi dari chat WhatsApp sampai sistem di belakangnya: asisten WhatsApp AI, automasi n8n, asisten AI self-hosted (OpenClaw dan Hermes Agent dari Nous Research), website, dan backend custom. Pengerjaan dibantu AI (Claude, Claude Code). Keputusan arsitektur tetap manusia. Setiap project termasuk dokumentasi dan garansi bug-fix 30 hari. Klien remote dilayani di Indonesia dan luar negeri (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
+> I Wayan Sudharmika adalah backend engineer di Bali, Indonesia, dan Backend Team Leader di Timedoor, sebuah software house. Pengalaman di sana tidak menyebut nama klien. Untuk klien freelance ia merakit AI dan automasi dari chat WhatsApp sampai sistem di belakangnya: asisten WhatsApp AI, automasi n8n, asisten AI self-hosted (OpenClaw dan Hermes Agent dari Nous Research), website, dan backend custom. Pengerjaan dibantu AI (Claude, Claude Code). Keputusan arsitektur tetap manusia. Setiap project termasuk dokumentasi dan garansi bug-fix 30 hari. Kerja remote dari Bali (GMT+8). Kontak: WhatsApp +62 899-2927-276, email sudhar.denpasar@gmail.com.
 
 ## Layanan dan harga mulai
 
@@ -26,7 +26,7 @@ Hermes Agent adalah agent open-source dari Nous Research. Tool internal monorepo
 
 ## Halaman
 
-- [Beranda (ID/EN)](https://sudharmika.com/): layanan, harga, studi kasus, proses, dan FAQ. Bahasa Inggris: https://sudharmika.com/en/
+- [Beranda (ID/EN)](https://sudharmika.com/): layanan, harga, pengalaman profesional, proses, dan FAQ. Bahasa Inggris: https://sudharmika.com/en/
 - [LinkedIn](https://www.linkedin.com/in/wayan-sudharmika-72820b109/)
 - [GitHub](https://github.com/soumabali)
 
